@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250221021921">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__left">
+					<a href="#" class="header__logo"><img src="img/header/logo.png" alt="#"></a>
+					<div class="header__languages">
+						<button class="header__en" href="#">
+							<img src="img/header/en.png" alt="#">
+							<span>EN</span>
+						</button>
+						<button class="header__ru" href="#">
+							<img src="img/header/ru.png" alt="#">
+							<span>RU</span>
+						</button>
+					</div>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" data-goto=".hero" class="menu__link">Главная</a></li>
+							<li class="menu__item menu__item-arrow"><a href="#" class="menu__link menu__link-arrow">Мебель</a>
+								<ul class="submenu">
+									<li>
+										<a href="#">Кухни</a>
+									</li>
+									<li>
+										<a href="#">Шкафы</a>
+
+									</li>
+									<li>
+										<a href="#">Мебель в ванную</a>
+									</li>
+									<li>
+										<a href="#">Другая мебель</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item"><a data-goto=".foto" href="#" class="menu__link">Наши работы</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">О нас</a>
+
+							</li>
+							<li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+							<li class="menu__item"><a data-goto=".contact" contact href="#" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<a class="header__social" href="#"><img src="img/header/WhatsApp_icon.png" alt="#"></a>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"><svg width="15" height="15" viewBox="0 0 15 15" fill="#A0A0A0" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.5191 12.1742L9.839 7.49792L14.5191 2.82162C15.1603 2.17977 15.1603 1.12948 14.5191 0.487636C13.8695 -0.162545 12.8286 -0.162545 12.179 0.487636L7.50729 5.16393L2.8272 0.487636C2.17765 -0.154209 1.13671 -0.162545 0.487162 0.487636C-0.15406 1.13782 -0.15406 2.17977 0.487162 2.82162L5.16724 7.49792L0.487162 12.1742C-0.162387 12.8161 -0.162387 13.8664 0.487162 14.5082C0.811936 14.8333 1.23664 14.9917 1.65302 14.9917C2.0694 14.9917 2.50243 14.8333 2.81888 14.5082L7.50729 9.84023L12.1874 14.5165C12.5121 14.8416 12.9285 15 13.3532 15C13.7779 15 14.2026 14.8416 14.5191 14.5165C15.1603 13.8664 15.1603 12.8161 14.5191 12.1742Z" fill="#A0A0A0"></path>
+						</svg></button>
+					<div class="popup__body">
+						<div class="popup__subtitle">Расчет стоимости</div>
+						<h2 class="popup__title">Обсудите детали с нашим специалистом</h2>
+						<div class="popup__text">Укажите ваши контакты и мы свяжемся с вами в ближайшее время</div>
+						<form data-popup-message="#form-message" data-ajax class="popup__form" action="files/sendmail/sendmail.php" method="POST">
+							<input data-required type="text" name="name" data-error="Заполните поле" placeholder="Ваше имя" class="popup__input input">
+							<input data-required id="phone" type="text" name="phone" data-error="Заполните поле" placeholder="375(__)___ __ __" class="popup__input input">
+							<button type="submit" class="popup__button">Рассчитать стоимость</button>
+							<div class="checkbox">
+								<input data-required id="c_1" data-error="Ознакомтесь с  условиями политики конфиденциальности" class="checkbox__input" type="checkbox" value="1" name="check">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Отправляя заявку вы соглашаетесь
+										с условиями политики конфиденциальности</span></label>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="form-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"><svg width="15" height="15" viewBox="0 0 15 15" fill="#A0A0A0" xmlns="http://www.w3.org/2000/svg">
+							<path d="M14.5191 12.1742L9.839 7.49792L14.5191 2.82162C15.1603 2.17977 15.1603 1.12948 14.5191 0.487636C13.8695 -0.162545 12.8286 -0.162545 12.179 0.487636L7.50729 5.16393L2.8272 0.487636C2.17765 -0.154209 1.13671 -0.162545 0.487162 0.487636C-0.15406 1.13782 -0.15406 2.17977 0.487162 2.82162L5.16724 7.49792L0.487162 12.1742C-0.162387 12.8161 -0.162387 13.8664 0.487162 14.5082C0.811936 14.8333 1.23664 14.9917 1.65302 14.9917C2.0694 14.9917 2.50243 14.8333 2.81888 14.5082L7.50729 9.84023L12.1874 14.5165C12.5121 14.8416 12.9285 15 13.3532 15C13.7779 15 14.2026 14.8416 14.5191 14.5165C15.1603 13.8664 15.1603 12.8161 14.5191 12.1742Z" fill="#A0A0A0"></path>
+						</svg></button>
+					<div class="popup__body">
+						<h2 style="font-weight: 700;" class="popup__title">СПАСИБО,ВАША ФОРМА УСПЕШНО ОТПРАВЛЕНА</h2>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<section data-watch="navigator" class="hero">
+				<img class="hero__image-bg" src="img/hero/bg.jpg" alt="#">
+				<div class="hero__container">
+					<ul class="hero__list">
+						<li class="hero__item">Распил</li>
+						<li class="hero__item">Кромкование</li>
+						<li class="hero__item">Фрезеровка</li>
+						<li class="hero__item">+ Еще 4</li>
+					</ul>
+					<h1 class="hero__title">
+						<span>Изготовим мебельные детали </span>
+						в течении 48 часов с гарантией качества в СПБ
+					</h1>
+					<p class="hero__text">Профессиональный криволинейный и прямолинейный распил, склейка, фрезеровка и
+						кромкование ДСП, ЛДСП, МДФ и других материалов.</p>
+				</div>
+			</section>
+			<section class="advantage">
+				<div class="advantage__container">
+					<div class="advantage__items">
+						<div class="advantage__item">
+							<h2 class="advantage__title">18 месяцев гарантии на все работы <img src="img/advantage/01.svg" alt="#"></h2>
+							<p class="advantage__text">Если в процессе монтажа или эксплуатации выявятся какие-то проблемы
+								исправим все за свой счет</p>
+						</div>
+						<div class="advantage__item">
+							<h2 class="advantage__title">Работаем на немецких станках <img src="img/advantage/02.svg" alt="#">
+							</h2>
+							<p class="advantage__text">Высокоточные станки ЧПУ от немецких производителей позволяют выполнять
+								работы с точностью до миллиметра</p>
+						</div>
+						<div class="advantage__item">
+							<h2 class="advantage__title">Средний срок выполнения 7 дней<img src="img/advantage/03.svg" alt="#"></h2>
+							<p class="advantage__text">Работаем быстро, в сложных ситуациях идем на встречу, и можем выполнять
+								заказ за 2-3 дня, без задержек</p>
+						</div>
+						<div class="advantage__item">
+							<h2 class="advantage__title">Доставим в любую точку СПБ<img src="img/advantage/04.svg" alt="#">
+							</h2>
+							<p class="advantage__text">С постоянными клиентами проводим работу дистанционно и по готовности
+								отправляем заказ по СПБ</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services">
+				<div class="services__container">
+					<div data-tabs class="tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="button" class="tabs__title _tab-active">Распил</button>
+							<button type="button" class="tabs__title">Кромкование </button>
+							<button type="button" class="tabs__title">Присадка</button>
+							<button type="button" class="tabs__title ">Фрезеровка</button>
+							<button type="button" class="tabs__title">Изготовление деталей </button>
+							<button type="button" class="tabs__title">Сборка</button>
+							<button type="button" class="tabs__title">Покраска в эмаль</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/01.jpg" alt="#">
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Распил</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/02.jpg" alt="#">
+
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Кромкование</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/03.jpg" alt="#">
+
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Присадка</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/04.jpg" alt="#">
+
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Фрезеровка</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/05.jpg" alt="#">
+
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Изготовление деталей</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/06.jpg" alt="#">
+
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Сборка</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body tab">
+								<div class="tab__wrapper">
+									<img class="tab__image-bg" src="img/tab/07.jpg" alt="#">
+
+									<div class="tab__left">
+										<div class="tab__subtitle">О услуге</div>
+										<h3 class="tab__title">Покраска в эмаль</h3>
+										<ul class="tab__material-list">
+											<li>МДФ</li>
+											<li>ЛДСП</li>
+											<li>Массив</li>
+										</ul>
+										<ul class="tab__list">
+											<li>Сроки от 3-х дней</li>
+											<li>Заказ от 5000 рублей</li>
+											<li>От 60 рублей за погонный метр</li>
+										</ul>
+										<a data-popup="#popup" href="#" class="tab__button">Рассчитать стоимость</a>
+									</div>
+									<div class="tab__right">
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/01.svg" alt="#">
+											<p class="tab__text">Быстрый расчет</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/02.svg" alt="#">
+											<p class="tab__text">Есть доставка</p>
+										</div>
+										<div class="tab__item">
+											<img class="tab__icon" src="img/tab/icon/03.svg" alt="#">
+											<p class="tab__text">От 60 рублей за п.м.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="dignity">
+				<div class="dignity__container">
+					<div class="dignity__item">
+						<div data-watch data-watch-once class="dignity__number"><span data-digits-counter>10</span>+</div>
+						<p class="dignity__text">опыт в производстве мебели</p>
+					</div>
+					<div class="dignity__item">
+						<div data-watch data-watch-once class="dignity__number"><span data-digits-counter>500</span>+</div>
+						<p class="dignity__text">реализованных проектов кухонь и шкафов</p>
+					</div>
+					<div class="dignity__item">
+						<div data-watch data-watch-once class="dignity__number"><span data-digits-counter>5</span>+</div>
+						<p class="dignity__text">лет гарантии
+							на изделия</p>
+					</div>
+				</div>
+			</div>
+			<section class="equipment">
+				<img class="equipment__image-bg" src="img/equipment/bg.jpg" alt="#">
+				<div class="equipment__container">
+					<div class="equipment__content">
+						<div class="equipment__subtitle">Наше оборудование</div>
+						<h2 data-watch data-watch-once class="equipment__title title-anim">Выполняем заказы на немецком
+							оборудовании</h2>
+						<p class="equipment__text">Даем гарантию 18 месяцев на все работы благодаря высокой точности станков и
+							8-летнему опыту в мебельном бизнесе</p>
+						<div class="equipment__items">
+							<div class="equipment__item">
+								<img class="equipment__image" src="img/equipment/01.webp" alt="#">
+								<p>Кромкооблицовочный станок</p>
+							</div>
+							<div class="equipment__item">
+								<img class="equipment__image" src="img/equipment/02.png" alt="#">
+								<p>Форматно-раскроечный станок</p>
+							</div>
+							<div class="equipment__item">
+								<img class="equipment__image" src="img/equipment/03.png" alt="#">
+								<p>Кромкооблицовочный станок</p>
+							</div>
+						</div>
+					</div>
+					<div class="equipment__block">
+						<img src="img/equipment/icon.svg" alt="#">
+						<p>Изготавливаем качественную мебель с 2016 года</p>
+					</div>
+				</div>
+			</section>
+			<section class="companies">
+				<div class="companies__container">
+					<h2 data-watch data-watch-once class="companies__title title-anim">Комплектующие и материалы, которые
+						используем в работе</h2>
+					<div class="companies__items">
+						<div class="companies__item">
+							<img src="img/companies/01.webp" alt="#">
+						</div>
+						<div class="companies__item">
+							<img src="img/companies/02.webp" alt="#">
+						</div>
+						<div class="companies__item">
+							<img src="img/companies/03.png" alt="#">
+						</div>
+						<div class="companies__item">
+							<img src="img/companies/04.png" alt="#">
+						</div>
+						<div class="companies__item">
+							<img src="img/companies/05.webp" alt="#">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="begin">
+				<div class="begin__container">
+					<h2 data-watch data-watch-once class="begin__title title-anim">Как начать работу с нами</h2>
+					<div class="begin__items">
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">СВЯЖИТЕСЬ С НАМИ</h3>
+							<p class="begin__text">Позвоните по номеру телефона +7(988)-555-03-75 и менеджер внесет ваше имя в
+								базу данных</p>
+							<a class="begin__button" href="#">Оставить заявку</a>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">ПЛИТНЫЙ МАТЕРИАЛ</h3>
+							<p class="begin__text">Оплатите плитный материал и кромку у наших поставщиков и пришлите чек об
+								оплате на WhatsApp, чтобы менеджер знал кому принадлежат данные листы, которые привезут к нам на
+								производство</p>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">ДЕТАЛИРОВКА</h3>
+							<p class="begin__text">Отправьте деталировку на WhatsApp. Размеры деталей должны быть с учетом
+								кромки (отнимать нечего не нужно)</p>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">РАСЧЕТ СТОИМОСТИ</h3>
+							<p class="begin__text">Менеджер подготовит программу для пильного центра и сделает расчет стоимости
+								услуг (раскроя и кромления)</p>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">ОПЛАТА</h3>
+							<p class="begin__text">Оплатите данные услуги</p>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">ЧЕК</h3>
+							<p class="begin__text">После оплаты направьте чек на WhatsApp и менеджер передаст вашу заявку на
+								производство</p>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">ВЫПОЛНЕНИЯ</h3>
+							<p class="begin__text">Срок выполнения заказа уточняйте у менеджера (обычно это 2-3 дня)</p>
+						</div>
+						<div data-watch data-watch-once data-watch-threshold='0.3' class="begin__item">
+							<h3 class="begin__name">ЗАКАЗ ГОТОВ</h3>
+							<p class="begin__text">Забрать раскрой можно с 9 до 18 часов в будние дни (суббота-воскресенье
+								выходной)</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<section data-watch="navigator" class="foto">
+				<div class="foto__container">
+					<h2 data-watch data-watch-once class="foto__title title-anim">Фото, с нашего производства <span>Нажмите
+							на фото, чтобы увеличить</span></h2>
+					<div data-gallery class="gallery">
+						<a href="img/foto/01.webp" class="gallery__image">
+							<img alt="Превью" src="img/foto/01.webp" class="gallery__preview">
+						</a>
+						<a href="img/foto/02.webp" class="gallery__image">
+							<img alt="Превью" src="img/foto/02.webp" class="gallery__preview">
+						</a>
+						<a href="img/foto/03.jpg" class="gallery__image">
+							<img alt="Превью" src="img/foto/03.jpg" class="gallery__preview">
+						</a>
+						<a href="img/foto/04.webp" class="gallery__image">
+							<img alt="Превью" src="img/foto/04.webp" class="gallery__preview">
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="questions">
+				<div class="questions__container">
+					<div data-watch data-watch-once class="questions__title title-anim">Часто задаваемые вопросы
+					</div>
+
+					<div data-spollers data-one-spoller class="spollers">
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title cercle">Как у вас осуществляется
+								доставка?
+								<div class="spollers__svg">
+									<svg role="presentation" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+											<g transform="translate(1.000000, 1.000000)" stroke="#000000">
+												<path d="M0,11 L22,11"></path>
+												<path d="M11,0 L11,22"></path>
+											</g>
+										</g>
+									</svg>
+								</div>
+							</button>
+							<div class="spollers__body">
+								Любым удобным способом:
+								<br>
+								Самовывоз;
+								<br>
+								Наемный транспорт;
+								<br>Яндекс доставка.
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">
+								Какие есть способы оплаты?
+								<div class="spollers__svg">
+
+									<svg role="presentation" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+											<g transform="translate(1.000000, 1.000000)" stroke="#000000">
+												<path d="M0,11 L22,11"></path>
+												<path d="M11,0 L11,22"></path>
+											</g>
+										</g>
+									</svg>
+								</div>
+							</button>
+							<div class="spollers__body">
+								Онлайн оплата;
+								<br>
+								Наличные.
+							</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">
+								Как быстро вы можете выполнить мой заказ?
+								<div class="spollers__svg">
+									<svg role="presentation" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+											<g transform="translate(1.000000, 1.000000)" stroke="#000000">
+												<path d="M0,11 L22,11"></path>
+												<path d="M11,0 L11,22"></path>
+											</g>
+										</g>
+									</svg>
+								</div>
+							</button>
+							<div class="spollers__body">Заказ выполняем от 1 дня.</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">Выполняете ли вы заказы в другие города
+								России?<div class="spollers__svg">
+
+									<svg role="presentation" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+											<g transform="translate(1.000000, 1.000000)" stroke="#000000">
+												<path d="M0,11 L22,11"></path>
+												<path d="M11,0 L11,22"></path>
+											</g>
+										</g>
+									</svg>
+								</div></button>
+							<div class="spollers__body">
+								Да выполняем. После готовности заказа Вам необходимо согласовать доставку с транспортной
+								компанией от нашего производства, находящегося по адресу: г. Ростов-на-Дону. ул.Орская 17г до
+								Вашего адреса
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="urgent">
+				<div class="urgent__container">
+					<img class="urgent__image-bg" src="img/urgent/bg.jpg" alt="#">
+
+					<div class="urgent__body">
+						<div class="urgent__subtitle">Срочные заказы</div>
+						<h2 data-watch data-watch-once class="urgent__title title-anim">Нужно срочно?</h2>
+						<p class="urgent__text">Пришлите тех.задание на Whats’app, быстро рассчитаем стоимость и возьмем заказ
+							в
+							работу</p>
+						<div class="urgent__list-body">
+							<ul class="urgent__list">
+								<li>Начнем работу уже завтра</li>
+								<li>Дадим гарантию 18 месяцев</li>
+							</ul>
+							<ul class="urgent__list">
+								<li>Решим все дистанционно</li>
+								<li>Организуем доставку</li>
+							</ul>
+						</div>
+						<div class="urgent__bottom">
+							<a class="urgent__button" href="#">Написать на Whats’app</a>
+							<div class="urgent__phone">
+								<p>Или звоните напрямую</p>
+								<a href="tel:79218994665">+7 921 899 46 65</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-watch="navigator" class="contact">
+				<div class="contact__container">
+					<div class="contact__content">
+						<h2 data-watch data-watch-once class="contact__title title-anim">Хотите встретиться лично?
+							<strong>Приезжайте в наш офис</strong>
+						</h2>
+						<div class="contact__clock">Офис открыт ежедневно с 10:00 - 18:00</div>
+						<a class="contact__phone" href="tel:971585312240">+(971)-58-531-2240</a>
+						<div class="contact__online">Мы онлайн, пишите</div>
+						<a href="#" target="_blank" rel="noopener noreferrer" class="contact__button">
+							<i class="icon-whatsapp"></i>
+							<span>
+								Написать на whatsapp
+							</span>
+						</a>
+						<p class="contact__text">Отвечаем быстро</p>
+						<a href="mailto:pilimspb@mail.ru" target="_blank" class="contact__social-body">
+							<div class="contact__social-icon"><img src="img/contact/01.svg" alt="#"></div>
+							<div class="contact__social-content">
+								<p class="contact__social-title">Наша почта:</p>
+								<p class="contact__social-mail">pilimspb@mail.ru</p>
+							</div>
+						</a>
+						<div class="contact__social-body">
+							<div class="contact__social-icon"><img src="img/contact/02.svg" alt="#"></div>
+							<div class="contact__social-content">
+								<p class="contact__social-title">Наша почта:</p>
+								<p class="contact__social-text">Санкт-Петербург, ул.Первого мая, д.2Б</p>
+							</div>
+						</div>
+					</div>
+					<div class="contact__map">
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae9309e95a6e723449b4f304ce09c23ecef4df0a666f47b7aefc6e563edd6aa43&amp;source=constructor" width="677" height="562" frameborder="0"></iframe>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<nav class="footer__menu">
+						<ul class="footer__list">
+							<li class="footer__link"><a href="#">Главная</a></li>
+							<li class="footer__link"><a href="#">О нас</a></li>
+							<li class="footer__link"><a href="#">Блог</a></li>
+
+						</ul>
+						<ul class="footer__list">
+
+							<li class="footer__link "><a href="#">Наши работы</a></li>
+							<li class="footer__link"><a href="#">Кухни</a></li>
+							<li class="footer__link"><a href="#">Шкафы</a></li>
+						</ul>
+					</nav>
+					<div class="footer__social">
+						<a class="footer__social-link  " href="#"><i class="icon-whatsapp"></i></a>
+						<a class="footer__social-link " href="#"><i class="icon-instagram"></i></a>
+
+					</div>
+					<div class="footer__info">
+						<a href="tel:971585312240" class="footer__phone">+(971)-58-531-2240 </a>
+						<a href="mailto:info.litekitchen@gmail.com" class="footer__mail">e-mail: info.litekitchen@gmail.com</a>
+					</div>
+					<a class="footer__logo" href="#"><img src="img/footer/logo.png" alt="#"></a>
+
+					<a data-goto=".hero" class="footer__up ">
+						<div class="footer__up-arrow-body"><i class="icon-arrow-up"></i></div>
+						<p>Наверх</p>
+					</a>
+
+
+				</div>
+				<div class="footer__bottom">
+					<p>2008-2023 LITE Kitchens FZC LLC</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20250221021921"></script>
+</body>
+
+</html>
