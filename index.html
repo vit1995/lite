@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250221021921">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250221122753">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +59,11 @@
 						</ul>
 					</nav>
 				</div>
-				<a class="header__social" href="#"><img src="img/header/WhatsApp_icon.png" alt="#"></a>
+				<a data-da=".menu, 768" href="tel:971585312240" class="header__phone">+(971)-58-531-2240</a>
+				<a class="header__social" href="#">
+					<!-- <img src="img/header/WhatsApp_icon.png" alt="#"> -->
+					WhatsApp
+				</a>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 
 			</div>
@@ -530,7 +534,7 @@
 				<div class="foto__container">
 					<h2 data-watch data-watch-once class="foto__title title-anim">Фото, с нашего производства <span>Нажмите
 							на фото, чтобы увеличить</span></h2>
-					<div data-gallery class="gallery">
+					<!-- <div data-gallery class="gallery">
 						<a href="img/foto/01.webp" class="gallery__image">
 							<img alt="Превью" src="img/foto/01.webp" class="gallery__preview">
 						</a>
@@ -543,6 +547,49 @@
 						<a href="img/foto/04.webp" class="gallery__image">
 							<img alt="Превью" src="img/foto/04.webp" class="gallery__preview">
 						</a>
+					</div> -->
+					<!-- Оболонка слайдера -->
+					<div class="foto__slider swiper">
+						<!-- Частина слайдера, що рухається -->
+						<div data-gallery class="foto__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<a href="img/foto/01.webp" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/01.webp" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/02.webp" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/02.webp" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/03.jpg" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/03.jpg" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/04.webp" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/04.webp" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/01.webp" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/01.webp" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/02.webp" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/02.webp" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/03.jpg" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/03.jpg" class="gallery__preview">
+
+							</a>
+							<a href="img/foto/04.webp" class="gallery__image foto__slide swiper-slide">
+								<img alt="Превью" src="img/foto/04.webp" class="gallery__preview">
+
+							</a>
+						</div>
+						<!-- Якщо потрібна пагінація -->
+						<div class="swiper-pagination"></div>
+
+						<!-- <div class="swiper-scrollbar"></div> -->
 					</div>
 				</div>
 			</section>
@@ -719,9 +766,10 @@
 						</ul>
 					</nav>
 					<div class="footer__social">
+
 						<a class="footer__social-link  " href="#"><i class="icon-whatsapp"></i></a>
 						<a class="footer__social-link " href="#"><i class="icon-instagram"></i></a>
-
+						<div class="footer__social-block"></div>
 					</div>
 					<div class="footer__info">
 						<a href="tel:971585312240" class="footer__phone">+(971)-58-531-2240 </a>
@@ -729,7 +777,7 @@
 					</div>
 					<a class="footer__logo" href="#"><img src="img/footer/logo.png" alt="#"></a>
 
-					<a data-goto=".hero" class="footer__up ">
+					<a data-da=".footer__social-block, 478" data-watch data-goto=".hero" class="footer__up ">
 						<div class="footer__up-arrow-body"><i class="icon-arrow-up"></i></div>
 						<p>Наверх</p>
 					</a>
@@ -742,7 +790,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250221021921"></script>
+	<script src="js/app.min.js?_v=20250221122753"></script>
 </body>
 
 </html>
